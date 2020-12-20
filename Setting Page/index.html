@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fireboard</title>
+    <link rel="icon" type="image/png" href="../Favicon.svg"/>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./settings.css">
+</head>
+<body>
+  <section>
+    <div class='backdrop'></div>
+    <div class = "mobile-sidebar animate__animated animate__slideInLeft">
+        <div class="sidebar-container animate__animated animate__slideInDown">
+           <div class="sidebar-logo--container">
+               <img src="../logo.svg" alt="" id="logo" height="24px" width="121px">
+            </div>
+            <div class="nav-items">
+                <ul>
+                  <a href="../Dashboard2/dashboard.html"><div class="navigator"><i class="far fa-square"></i><li class='list-item'>Dashboard</li></div></a>
+                    
+                  <a href="../BlogPage/index.html"><div class="navigator"><i class="fas fa-rss"></i><li class='list-item'>Blogs</li></div></a>
+                  
+                  <a href="../Setting Page/index.html"><div class="navigator"><i class="fas fa-cog"></i><li class='list-item'>Settings</li></div></a>
+                  
+                  <a href="../index.html"><div class="navigator"><i class="fas fa-user-alt"></i><li class='list-item'>Sign out</li></div></a>
+                </ul>
+            </div>
+
+        </div> 
+    </div>   
+    <header>
+        <a href="../index.html"><img src="../logo.svg" alt="" id="logo" height="24px" width="121px"></a>
+        <div class="icon-container">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+    </header>
+    <nav class="desktop-sidebar">
+      <ul>
+        <a href="../Dashboard2/dashboard.html"><div class="navigator"><i class="far fa-square"></i><li class='list-item'>Dashboard</li></div></a>
+                    
+        <a href="../BlogPage/index.html"><div class="navigator"><i class="fas fa-rss"></i><li class='list-item'>Blogs</li></div></a>
+                    
+        <a href="./index.html"><div class="navigator"><i class="fas fa-cog"></i><li class='list-item'>Settings</li></div></a>
+                    
+      </ul>
+    </nav>
+    <main>
+        <div class="toast animate__animated animate__zoomIn">
+          <span class="toast-message">Changes Saved</span>
+        </div>
+        <form class="forma">
+          <div class="heading">
+            <h3 id="signup-headline">My Profile</h3>
+            <div id="edit-button">
+              <span style="display: inline-block; padding: 6px;">Edit</span><i class="fas fa-pen"></i>
+            </div>
+          </div>
+            <hr>
+              <div class= "top-row-form">
+                <label for="firstname" class="toplabels">First Name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Vaibhav" required>
+              </div>
+              <div class= "top-row-form"> 
+                <label for ="lastname" class="toplabels">Last Name</label>
+                <input type="text" id="lastname" name="lastname" placeholder= "Sonwani" required>
+              </div>
+              <div class= "bottom-row-form"> 
+                <label for = "emailadd">Email Address</label>
+                <input type="email" id="emailadd" name="mailadd" placeholder= "sonwani7@gmail.com" required>
+              </div>
+              <div class="button-panel animate__animated animate__flipInX">
+                <button class="cancel-button">Cancel</button>
+                <input type="submit" value="Save" class="save-button">
+              </div> 
+        </form>
+    </main>
+
+    <footer>
+        <div id="copyrights">
+           <span>&copy; 2020 Fireboard</span> 
+        </div>
+        <div id="info">
+           <p class= "fcont">Privacy</p>
+           <p class= "fcont">Contact</p>
+        </div>
+    </footer>
+  </section>  
+  <script src="./dom.js"></script>  
+</body>
+</html>

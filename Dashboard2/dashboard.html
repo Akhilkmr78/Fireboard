@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fireboard</title>
+    <link rel="icon" type="image/png" href="../Favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0" defer></script>
+    <script src="./charting.js" defer></script>
+    <link rel="stylesheet" href="./dashboard.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+  <div class='backdroped'></div>
+    <div class = "mobile-sidebar animate__animated animate__slideInLeft ">
+        <div class="sidebar-container animate__animated animate__slideInDown">
+           <div class="sidebar-logo--container ">
+               <img src="../logo.svg" alt="" id="logo" height="24px" width="121px">
+            </div>
+            <div class="nav-items">
+                <ul>
+                  <a href="../Dashboard2/dashboard.html"><div class="navigator"><i class="far fa-square"></i><li class='list-item'>Dashboard</li></div></a>
+                    
+                  <a href="../BlogPage/index.html"><div class="navigator"><i class="fas fa-rss"></i><li class='list-item'>Blogs</li></div></a>
+                  
+                  <a href="../Setting Page/index.html"><div class="navigator"><i class="fas fa-cog"></i><li class='list-item'>Settings</li></div></a>
+                  
+                  <a href="../index.html"><div class="navigator"><i class="fas fa-user-alt"></i><li class='list-item'>Sign out</li></div></a>
+                </ul>
+            </div>
+
+        </div> 
+    </div>
+    <main id= "page-container">
+          <header>
+                <a href="../index.html"><img src="../logo.svg" alt="" id="logo" height="24px" width="121px"></a>
+                <div class="icon-container">
+                  <div class="hamburger"></div>
+                  <div class="hamburger"></div>
+                </div>
+                <div id="profile" class="hide-on-med-and-down">
+                  <img src="../Profile.svg" alt="" height="24px" width="24px" class="image">
+                    <span class= "tooltip-content"><a href="../index.html">Sign out</a></span>
+                </div>
+          </header>
+          <div class="desktop-sidebar hide-on-med-and-down">
+            <ul>
+              <div class="navigator"><i class="far fa-square"></i><li class='list-item'>Dashboard</li></div>
+                          
+              <a href="../BlogPage/index.html"><div class="navigator"><i class="fas fa-rss"></i><li class='list-item'>Blogs</li></div></a>
+                          
+              <a href="../Setting Page/index.html"><div class="navigator"><i class="fas fa-cog"></i><li class='list-item'>Settings</li></div></a>
+                          
+            </ul>
+          </div>
+          <section id = "cards-container">
+                <div class = "cards">
+                  <div class="media-brand twitter">Twitter</div>
+                  <div class = "date">
+                    <div class="edit-button">
+                      <span class='dropdown-trigger' data-target='dropdown1'>week<i class="fas fa-angle-down"></i></span>
+                      <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="#!" style="color: #f96d00">week</a></li>
+                        <li><a href="#!" style="color: #f96d00">month</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class = "thumbnail">
+                      <div class="chart-container">
+                      <canvas id="chart" width="300" height="80"></canvas>
+                      </div>
+                  </div>
+                </div>
+
+                <div class = "cards">
+                    <div class="media-brand linkedin">LinkedIn</div>
+                    <div class = "date">
+                      <div class="edit-button">
+                        <span class='dropdown-trigger' data-target='dropdown1'>week<i class="fas fa-angle-down"></i></span>
+                        <ul id='dropdown1' class='dropdown-content'>
+                          <li><a href="#!" style="color: #f96d00">week</a></li>
+                          <li><a href="#!" style="color: #f96d00">month</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class = "thumbnail">
+                       <div class="chart-container">
+                        <canvas id="chart3" width="300" height="80"></canvas>
+                       </div>
+                    </div>
+                </div>
+
+                <div class = "cards">
+                  <div class="media-brand facebook">FB</div>
+                  <div class = "date">
+                    <div class="edit-button">
+                      <span class='dropdown-trigger' data-target='dropdown1'>week<i class="fas fa-angle-down"></i></span>
+                      <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="#!" style="color: #f96d00">week</a></li>
+                        <li><a href="#!" style="color: #f96d00">month</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class = "thumbnail">
+                     <div class="chart-container">
+                      <canvas id="chart2" width="300" height="80"></canvas>
+                     </div>
+                  </div>
+              </div>
+
+                <div class = "cards">
+                  <div class="media-brand reddit">Reddit</div>
+                  <div class = "date">
+                    <div class="edit-button">
+                      <span class='dropdown-trigger' data-target='dropdown1'>week<i class="fas fa-angle-down"></i></span>
+                      <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="#!" style="color: #f96d00">week</a></li>
+                        <li><a href="#!" style="color: #f96d00">month</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class = "thumbnail">
+                     <div class="chart-container">
+                      <canvas id="chart4" width="300" height="80"></canvas>
+                     </div>
+                  </div>
+
+                  
+              </div>
+          </section>
+          <aside>
+            <div class = "suggested-card">
+              <p class="suggested-heading">Total Visitor</p>
+              <div class="lower-part">
+                <h6 class="suggested-number">00600</h6>
+                <img src="./Down.svg" id="red-arrow" height="20px" width="22px">
+              </div>
+              
+            </div>
+            <div class = "suggested-card card2">
+              <p class="suggested-heading">Avg. Time Spent</p>
+              <div class="lower-part">
+                <h6 class="suggested-number">4 min</h6>
+                <img src="./up.svg" id="green-arrow" height="20px" width="22px">
+            </div>
+          </aside>
+          <footer>
+                <div id="copyrights">
+                <span>&copy; 2020 Fireboard</span> 
+                </div>
+                <div id="info">
+                <p class= "fcont">Privacy</p>
+                <p class= "fcont">Contact</p>
+                </div>
+        </footer> 
+    </main> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

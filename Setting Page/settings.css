@@ -1,0 +1,495 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    background-color: #fffcfa;
+}
+
+section{
+    height: 100vh;
+    display: grid;
+    grid-template: 4rem auto 4rem/ 1fr;
+    gap: 1vh;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 8px;
+}
+
+header{
+    grid-area: 1/1/2/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #fdc396;
+}
+
+.desktop-sidebar{
+    display: none;
+}
+
+footer{
+    grid-area: 3/1/4/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#copyrights {
+    font-size: 0.7rem;
+    position: relative;
+    left: 16px;
+}
+
+#info {
+    font-size: 0.7rem;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.fcont{
+    position: relative;
+    right: 2vw;
+    padding-right: 12px;
+    margin-left: 2px;
+}
+
+.backdrop{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(155, 155, 130, 0.5);
+    display: none;
+}
+
+.mobile-sidebar{
+    height: 100%;
+    width: 65%;
+    position: fixed;
+    z-index: 10;
+    background-color: #fffcfa;
+    display: none;
+}
+
+.sidebar-container{
+    display: grid;
+    grid-template: 2.5rem auto/1fr;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.navigator{
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 80%;
+    color: #686161;
+    font-weight: 900;
+}
+
+.navigator:active, .navigator:hover{
+    background-color: #fdc396;
+    border-left: 6px solid #f96d00;
+    border-radius: 4px;
+    color: #f96d00;
+}
+
+.far, .fas{
+    padding: 0.6rem;
+    display: inline-block;
+    height: 1rem;
+    
+}
+
+.list-item{
+    display: inline-block;
+    padding: 1rem;
+    padding-left: 0.4rem;
+    font-size: 1.1rem;
+}
+
+.icon-container{
+    justify-self: end;
+}
+
+.hamburger {
+    width: 20px;
+    height: 4px;
+    background-color: #f96d00;
+    margin: 4px 32px;
+}  
+
+form{
+    background-color: white;
+    width: 34%;
+    height: fit-content;
+    min-width: 260px;
+    box-shadow: 0 0 16px 8px rgba(219, 217, 217, 0.2);
+    margin: 3% auto;
+    border-radius: 16px;
+    padding: 2%;
+    position: relative;
+    outline: none;
+}
+
+form h3 {
+    font-size: 0.9rem;
+    font-weight: 900;
+    margin-left: 2%;
+    display: inline-block;
+}
+ 
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+#edit-button{
+    display: inline-block;
+    width: max-content;
+    height: max-content;
+    border:2px solid black;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    color: black;
+    margin-bottom: 1%;
+    position: relative;
+    right: 4%;
+    top:8px;
+    font-family: 'Montserrat';
+    background-color: white;
+}
+
+.fa-pen{
+    padding: 4px;
+}
+
+hr{
+    color: black;
+    width: 94%;
+}
+
+
+label, input{
+    display: block;
+    outline: none;
+}
+
+label {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 0.76rem;
+    position: relative;
+    left: 6%;
+}
+
+input{
+    width: 96%;
+    height: 2.2rem;
+    border: none;
+    border-radius: 40px;
+    margin: 4% auto;
+    background-color: #f8f8f8;
+    color: #666464;
+}
+
+
+
+input[type="text"], input[type="email"] {
+    font-size: 1rem;
+    text-indent: 4%;
+}
+
+.button-panel{
+    margin: auto;
+    display: none;
+}
+
+.cancel-button{
+    width: 45%;
+    height: 2.2rem;
+    border: none;
+    border-radius: 40px;
+    margin-left: 6px;
+    background-color: white;
+    border: 2px solid #f96d00;
+    color: #f96d00;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 1rem;
+    /* padding: 6px 20px; */
+    cursor: pointer;
+    
+}
+
+input[type="submit"] {
+    font-weight: 700;
+    font-size: 1rem;
+    border: 2px solid #f96d00;
+    background-color: #f96d00;
+    color: white;
+    width: 45%;
+    display: inline-block;
+    margin-left: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+.toast{
+    width: 160px;
+    height: 50px;
+    background-color: rgb(117, 190, 6);
+    position: absolute;
+    top: 5px;
+    left: 30vw;
+    z-index: 5;
+    border-radius: 16px;
+    color: white;
+    display: none;
+}
+
+.toast-message{
+     position: relative;
+     top: 14px;
+     left: 17px;
+}
+
+form a{
+    text-decoration: none;
+}
+
+
+button a{
+    text-decoration: none;
+    color: #f96d00;
+}
+
+button a:visited{
+    color: #f96d00;
+}
+
+@media (min-width: 480px) and (orientation: landscape){
+    img{
+        height: 75%;
+        margin-left: 2%;
+    } 
+    
+ }
+ 
+ @media (min-width:767px) {
+     img{
+         max-width: 100%;
+         height: auto;
+         margin-left: 12px;  
+     }
+ }
+
+@media (min-width:767px) {
+    
+
+    form{
+        width: 58%;
+        position: relative;
+        top: 4vh;
+    }
+    form h3{
+        font-size: 1.4rem;
+    }
+
+    .top-row-form{
+        display: inline-block;
+        width:48%;
+        height: fit-content;
+        margin: auto;
+        position: relative;
+        left: 2.2%;
+    }
+    
+    .bottom-row-form{
+        display: inline-block;
+        width: 100%;
+        height: fit-content;
+        margin: auto;
+    }
+
+    #emailadd{
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    label{
+        font-size: 1.2rem;
+    }
+
+    input{
+        height: 3.2rem;
+    }
+
+    input[type="text"], input[type="email"]{
+        font-size: 1.4rem;
+    }
+
+    #edit-button{
+        position: relative;
+        top: 20px;
+    }
+    
+    .button-panel{
+        width: 50%;
+        margin: 0;
+        margin-top: 10px;
+        position: relative;
+        left: 48%;
+    }
+
+    input[type="submit"]{
+        font-size: 1rem;
+        width: 45%;
+        height: 2.2rem;
+    }
+
+    .toast{
+        left: 40vw;
+    }
+
+}
+
+@media (min-width:900px) and (orientation:landscape){
+    
+    section{
+        height: 100vh;
+        display: grid;
+        grid-template: 4rem auto 4rem/ 1fr 5fr;
+        grid-template-areas: "header header"
+                              "navbar main"
+                              "footer footer";
+        gap: 1vh;
+    }
+    .icon-container{
+        display:none;
+    }
+
+    header{
+        grid-area: header;
+    }
+
+    .desktop-sidebar{
+        display: block;
+        /* border-right: 1px solid black; */
+        width: 240px;
+        grid-area: navbar;
+    }
+
+    main{
+        grid-area: main; 
+    }
+
+    footer{
+        grid-area: footer;
+    }
+    
+    form{
+        width: 50%;
+        margin-left: 10%;
+        /* border: 2px solid black; */
+        
+    }
+
+    .toast{
+        left: 48vw;
+    }
+
+}
+
+@media (min-width:900px) and (orientation:landscape){
+    .top-row-form{
+        display: inline-block;
+        width:48%;
+        height: fit-content;
+        margin: auto;
+        position: relative;
+        left: 2.2%;
+    }
+
+    .bottom-row-form{
+        display: inline-block;
+        width: 100%;
+        height: fit-content;
+        margin: auto;
+    }
+
+    input{
+        margin: 2% auto;
+        height: 3.6rem;
+    }
+
+    label{
+        font-size: 1.2rem;
+    }
+
+    .top-row-form label {
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
+
+    
+
+    input[type="submit"]{
+        font-size: 1rem;
+        width: 45%;
+        height: 2.2rem;
+    }
+
+
+    input[type="text"], input[type="email"] {
+        font-size: 1.4rem;
+        text-indent: 4%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    form{
+        width: 32vw;
+        height: fit-content;
+        padding: 4%;
+    }
+
+    form h3{
+        font-size: 1.1rem;
+        margin-top: 0;
+        margin-bottom: 8px ;
+    }
+
+    label{
+        font-size: 0.8rem;
+    }
+
+    input{
+        height: 2.8rem;
+    }
+
+    #edit-button{
+        position: relative;
+        top: -4px;
+    }
+
+    input[type="submit"] {
+        font-size: 1rem;
+        height: 2.4rem;
+        font-weight: 700;
+    }
+
+    input[type="text"], input[type="email"] {
+        font-size: 1.2rem;
+        text-indent: 4%;
+    }
+
+}
